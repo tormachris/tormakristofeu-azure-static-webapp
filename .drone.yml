@@ -7,7 +7,6 @@ steps:
   environment:
     APITOKEN:
      from_secret: APITOKEN
-    HUGO_VERSION: 0.97.1
   image: mcr.microsoft.com/appsvc/staticappsclient:stable
   commands:
   - /bin/staticsites/StaticSitesClient --apiToken $APITOKEN --outputLocation "staticfiles" --app "/drone/src/staticfiles" --deploymentaction "upload" --appBuildCommand "echo 1"
